@@ -1,0 +1,317 @@
+<html>
+<head>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<title>Brandon's Interactive Resume</title>
+</head>
+<body>
+
+<div id="background-image"></div>
+
+<div id="navback">
+	<div id="nav">
+			<a id="obj" href="#">Objective</a>
+			<a id="devex" href="#">Dev. Experience</a>
+			<a id="profex" href="#">Pro. Experience</a>
+			<a id="langus" href="#">languages</a>
+			<a id="educate" href="#">Education</a>
+	</div>
+</div>
+
+<div id="intro">
+	<h1>Brandon.</h1>
+	<p>Develop || Solve || Improve</p>
+</div>
+		<div id='objective'>
+			<h1><u>Objective</u></h1>
+			<h1>Brandon is a full stack developer. His goal is to find an entry-level development position where he will constantly be challenged with new technologies and problems.</h1>
+			<h4> Contact me anytime on <a href="https://www.linkedin.com/in/brandonbarsotti">linkedin</a>, <a href="https://github.com/barsotti">github</a>, or by email at <a href="mailto:barsotti@vt.edu?Subject=I found your website!" target="_top">barsotti@vt.edu</a>.</h4>
+			<button id="button">Return</button>
+		</div>
+
+		<div id="proexp">
+				<h1><u>Professional Experience</u></h1>
+				<h3><b>Management Development Program, GEICO, Current</b></h3>
+				<h3><b>Consultant, Virginia Tech Consulting Club</b></h3>
+						<ul><b>Client: YMCA</b></li>
+							<li>Created a business plan for a new potential revenue stream for our client</li>
+							<li>Obtained and Analyzed market data to determine feasibility of the stream.</li>
+							<li>Performed competition analysis to find strengths and weaknesses of client competitors</li>
+							<li>Managed this project while taking 18 credit hours and working 15 hours per week</li>
+						</ul>
+					<ul><b>Case Competition (1st place)</b></li>
+						<li>Determined interim and long run solutions for pharmaceutical company&apos;s transition to new regulation demanding serialization process using information on growth from recent history and cost of equipment and labor.</li></ul>
+					</ul>
+				<h3><b>Student Assistant Manager, Virginia Tech Dining Services</b></h3>
+					<ul><li>Led a team in the dish room through fast paced rushes</li>
+						<li>Set an example by working quickly and paying attention to detail.</li>
+						<li>Performance stood out well enough to be promoted after 4 weeks</li></ul>
+				<h3><b>Server, Server Trainer, Buffalo Wild Wings</b></h3>
+				<button id="button">Return</button>
+		</div>
+
+			<div id="devs">
+				<h1><u>Development Experience</u></h1>
+				<h3>Java</h3>
+					<ul>
+						<li><u>Asteroids Game</u></li>
+						<p>Using greenfoot IDE, I created an asteroids game where I implemented inheretence, automated testing, public and private variables, constructor overloading, loops and random number generators.</p>
+						<li><u>Ants Vs. Some Bees</u></li>
+						<p>Also using greenfoot IDE, I created a game similar to Plants vs. Zombies. I used inheretence, automated testing, method overloading, recursion and many other features of Java to perfect the project.</p>
+					</ul>
+				<h3>Front-End</h3>
+					<ul>
+						<li>The website you are looking at, which runs using jQuery</li>
+						<li>Career Finder Website, which runs using JavaScript</li>
+					</ul>
+					<p>All of these projects can ve viewed on my <a href="https://github.com/barsotti">Github</a>.</p>
+					<button id="button">Return</button>
+			</div>
+
+			<div id="langs">
+				<h1><u>Languages and Skills</u></h1>
+				<ul>
+					<li>Java</li>
+					<li>HTML5</li>
+					<li>CSS 3</li>
+					<li>Bootstrap</li>
+					<li>JavaScript</li>
+					<li>JQuery</li>
+				</ul>
+				<button id="button">Return</button>
+			</div>
+
+			<div id="edu">
+				<h1><u>Education</u></h1>
+				<li>Virginia Tech - Economics BA - May 2016</li>
+				<p></p>
+				<ul>
+					<li> In major GPA: 3.49/4</li>
+					<li> Overall GPA: 3.23/4</li></ul>
+				<li>Countless hours spent on:</li><ul>
+					<li>Youtube</li>
+					<li>Codecademy</li>
+					<li>stackoverflow</li>
+				</ul>
+				<button id="button">Return</button>
+			</div>
+
+
+	<div id="bottom">
+		<div id="rez"><h2><u><a href="rez.pdf">Printable Resume</a></u></h2>
+		</div>
+		<div id="instructions"><p>Click the links above or use the arrows on your keyboard to explore.</p></div>
+	</div>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+<script>
+	$(function() {
+		$('#edu').hide();
+		$('#devs').hide();
+		$('#objective').hide();
+		$('#proexp').hide();
+		$('#langs').hide();
+		$('#button').hide();
+	})
+
+	$(function() {
+		$('#button').click(function() {
+			$('#intro').show();
+			$('#navback').show();
+			$('#edu').hide();
+			$('#devs').hide();
+			$('#objective').hide();
+			$('#proexp').hide();
+			$('#langs').hide();
+			$('#button').hide();
+		});
+	});
+
+	$(function() {
+		$('#obj').click(function() {
+			$('#intro').hide(200);
+			$('#navback').hide();
+			$('#objective').show();
+			$('#button').show(500);
+			current = 1;
+		});
+	});
+
+	$(function() {
+		$('#devex').click(function() {
+			$('#intro').hide(200);
+			$('#navback').hide();
+			$('#devs').show();
+			$('#button').show(500);
+			current = 2;
+		});
+	});
+
+	$(function() {
+		$('#profex').click(function() {
+			$('#intro').hide(200);
+			$('#navback').hide();
+			$('#proexp').show();
+			$('#button').show(500);
+			current = 3;
+		});
+	});
+
+	$(function() {
+		$('#langus').click(function() {
+			$('#intro').hide(200);
+			$('#navback').hide();
+			$('#langs').show();
+			$('#button').show(500);
+			current = 4;
+		});
+	});
+
+	$(function() {
+		$('#educate').click(function() {
+			$('#intro').hide(1000);
+			$('#navback').hide();
+			$('#edu').show();
+			$('#button').show(500);
+			current = 5;
+		});
+	});
+
+
+	var current = 0;
+
+	$(document).keydown(function(e){
+	    if (e.keyCode == 37) {
+	    	if (current == 0) {
+		    	$('#intro').hide(1000);
+		    	$('#navback').hide();
+				$('#edu').show();
+				$('#button').show(500);
+				current = 5;
+			}
+			else if (current == 5) {
+		    	$('#edu').hide(1000);
+		    	$('#navback').hide();
+				$('#langs').show();
+				$('#button').show(500);
+				current = 4;
+			}
+			else if (current == 4) {
+		    	$('#langs').hide(1000);
+		    	$('#navback').hide();
+				$('#proexp').show();
+				$('#button').show(500);
+				current = 3;
+			}
+			else if (current == 3) {
+		    	$('#proexp').hide(1000);
+		    	$('#navback').hide();
+				$('#devs').show(500);
+				$('#button').show(500);
+				current = 2;
+			}
+			else if (current == 2) {
+		    	$('#devs').hide(1000);
+		    	$('#navback').hide();
+				$('#objective').show();
+				$('#button').show(500);
+				current = 1;
+			}
+			else if (current == 1) {
+		    	$('#objective').hide(1000);
+		    	$('#button').hide();
+				$('#intro').show();
+				$('#navback').show();
+				current = 0;
+			}
+	    }
+	    else if (e.keyCode == 38) {
+	    	$('#intro').show();
+			$('#navback').show();
+			$('#edu').hide();
+			$('#devs').hide();
+			$('#objective').hide();
+			$('#proexp').hide();
+			$('#langs').hide();
+			$('#button').hide();
+	    }
+	     else if (e.keyCode == 39) {
+	    	if (current == 0) {
+		    	$('#intro').hide(1000);
+		    	$('#navback').hide();
+				$('#objective').show();
+				$('#button').show(500);
+				current = 1;
+			}
+			else if (current == 1) {
+		    	$('#objective').hide(1000);
+		    	$('#navback').hide();
+				$('#devs').show();
+				$('#button').show(500);
+				current = 2;
+			}
+			else if (current == 2) {
+		    	$('#devs').hide(1000);
+		    	$('#navback').hide();
+				$('#proexp').show();
+				$('#button').show(500);
+				current = 3;
+			}
+			else if (current == 3) {
+		    	$('#proexp').hide(1000);
+		    	$('#navback').hide();
+				$('#langs').show(500);
+				$('#button').show(500);
+				current = 4;
+			}
+			else if (current == 4) {
+		    	$('#langs').hide(1000);
+		    	$('#navback').hide();
+				$('#edu').show();
+				$('#button').show(500);
+				current = 5;
+			}
+			else if (current == 5) {
+		    	$('#edu').hide(1000);
+		    	$('#button').hide();
+				$('#intro').show();
+				$('#navback').show();
+				current = 0;
+			}
+	    }
+	     else if (e.keyCode == 40) {
+	    	$('#intro').slideUp();
+			$('#edu').slideUp();
+			$('#devs').slideUp();
+			$('#objective').slideUp();
+			$('#proexp').slideUp();
+			$('#langs').slideUp();
+			$('#button').slideUp();
+			$('#navback').slideUp();
+			$('#instructions').slideUp();
+	    }
+	});
+</script>
+
+
+</body>
+
+
+
+
+
+
+
+</html>
+
+
+<!-- Pro tip
+
+37 - left
+38 - up
+39 - right
+40 - down
+
+-->
